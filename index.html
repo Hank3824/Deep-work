@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScholarFlow - 数字手账</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --base-bg: #FDFBF6; /* Warm Beige Base */
+        --inner-bg: #FDFBF6; /* Paper surface */
+        --text-coffee: #4A4238; /* Primary Ink */
+        --text-coffee-light: #8C8478; /* Secondary Ink */
+        --accent-orange: #E6A05D;
+        --highlighter-yellow: #F4E4BC;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: var(--base-bg);
+        color: var(--text-coffee);
+        overflow: hidden;
+      }
+      .serif-font {
+        font-family: 'Playfair Display', serif;
+      }
+      .handwriting {
+        font-family: 'Caveat', cursive;
+        letter-spacing: 0.02em;
+      }
+      /* Layering Effects */
+      .paper-desk {
+        background-color: #DAD7CD; /* Desk/Outer color from previous request for context */
+      }
+      .planner-page {
+        background-color: var(--inner-bg);
+        box-shadow: 0 10px 40px rgba(74, 66, 56, 0.12);
+        border: 1px solid rgba(74, 66, 56, 0.05);
+      }
+      .timeline-grid {
+        background-image: 
+          linear-gradient(#EBE5D9 1px, transparent 1px),
+          linear-gradient(90deg, #EBE5D9 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #D3CDC0;
+        border-radius: 10px;
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+        "framer-motion": "https://esm.sh/framer-motion@^12.23.26"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
